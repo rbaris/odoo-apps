@@ -1,0 +1,46 @@
+<odoo>
+  <data>
+    explicit list view definition
+
+    <record model="ir.ui.view" id="gorev_takip.list">
+      <field name="name">Görev Takip</field>
+      <field name="model">gorev_takip.gorev_takip</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="description"/>
+          <field name ="donumBasinaUcret"/>
+          <field name ="isDone"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="gorev_takip.action_window">
+      <field name="name">Görev Takip</field>
+      <field name="res_model">gorev_takip.gorev_takip</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.server" id="gorev_takip.action_server">
+      <field name="name">Görev Takip</field>
+      <field name="model_id" ref="model_gorev_takip_gorev_takip"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+
+    <menuitem name="Görev Takip" id="gorev_takip.menu_root"/>
+    <menuitem name="List" id="gorev_takip.menu_1" parent="gorev_takip.menu_root" action="gorev_takip.action_window"/>
+    <menuitem name="Server to list" id="gorev_takip.menu_2" parent="gorev_takip.menu_root" action="gorev_takip.action_server"/>
+
+  
+               explicit list view definition
+
+
+  </data>
+</odoo>
