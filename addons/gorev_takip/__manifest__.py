@@ -7,7 +7,7 @@
     """,
     'author': "Barış Atakcı",
     'category': 'business',
-    'version': '0.1',
+    'version': '1.0',
     'sequence':-100,
     'depends': ['base'],
     'data': [
