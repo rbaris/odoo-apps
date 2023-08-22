@@ -3,8 +3,9 @@ from odoo import models, fields, api
 class GorevAdres(models.Model):
     _name = 'gorev.adres'
     _description = 'gorev.adres'
+    _rec_name = 'adres_name'
     
-    name = fields.Char("Adres Başlığı")
+    adres_name = fields.Char("Adres Başlığı")
     il = fields.Char("İl")
     ilce = fields.Char("İlçe")
     mahalle = fields.Char("Mahalle")

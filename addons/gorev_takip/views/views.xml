@@ -11,9 +11,9 @@
           <field name="description"/>
           <field name ="donumBasinaUcret"/>
           <field name ="isDone"/>
-          <field name="address_id"/>
-          <field name ="medicine_id"/>
+          <field name="adres_id"/>
           <field name ="pilot_id"/>
+          <field name ="medicine_id"/>
         </tree>
       </field>
     </record>
