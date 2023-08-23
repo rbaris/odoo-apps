@@ -12,4 +12,4 @@ class GorevAdres(models.Model):
     adaNo = fields.Integer("Ada No")
     parselNo = fields.Integer("Parsel No")
 
-    task_ids = fields.Many2one('gorev_takip.gorev_takip',string ='Görev(İsteğe Bağlı) ',required=False)
+    #task_ids = fields.Many2one('gorev_takip.gorev_takip',string ='Görev(İsteğe Bağlı) ',required=False)

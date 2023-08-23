@@ -7,11 +7,11 @@ class gorev_takip(models.Model):
 
     name = fields.Char("Görevin Başlığı")
     description = fields.Text("Görevin Açıklaması")
-    isDone = fields.Selection([('0','Yapılıyor'),('1','Yapılmadı'),('2','Yapıldı'),('3','İptal edildi')],string='Yapılma Durumu')
+    isDone = fields.Selection([('yapiliyor','Yapılıyor'),('yapilmadi','Yapılmadı'),('yapildi','Yapıldı'),('iptal','İptal edildi')],string='Yapılma Durumu',default='yapiliyor')
     donumBasinaUcret = fields.Integer("Dönüm başına ücret")
-    adres_id = fields.Many2one('gorev.adres',string= 'Adres')
-    pilot_id = fields.Many2many('task.pilot',string='Pilotlar')
-    medicine_id = fields.Many2many('task.medicine',)
+    adres_id = fields.Many2one('gorev.adres',string= 'Görevin Adresi')
+    pilot_id = fields.Many2many('task.pilot',string='Görevdeki Pilotlar')
+    medicine_id = fields.Many2many('task.medicine',string='Görevdeki İlaçlar')
 
     
     # address_id = fields.One2many('gorev.adres','task_ids',string='Görevin Adresi')
